@@ -1,0 +1,48 @@
+      /* Reset default styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Main container */
+    .landing-page {
+        background-image: url('https://www.bing.com/images/create/a-beautiful-landing-page-for-a-room-finding-websit/1-66544303ac1540ff867562d66a19f588?id=p4zrPWUmeYjwwwMlSNW0YA%3d%3d&view=detailv2&idpp=genimg&idpclose=1&thId=OIG1.RKUProxK22IC1_yF30EE&frame=sydedg&FORM=SYDBIC'); /* Replace with your actual image */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Heading */
+    .landing-page h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Subheading */
+    .landing-page p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Call-to-action button */
+    .cta-button {
+        background-color: #ff6b6b;
+        color: #fff;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #ff4f4f;
+    }
