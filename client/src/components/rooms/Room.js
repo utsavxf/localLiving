@@ -96,7 +96,7 @@ const Room = () => {
             title={room?.uName || ''}
             sx={{
               position: 'absolute',
-              bottom: '8px',
+              bottom: '8px', 
               left: '8px',
               zIndex: 2,
             }}
