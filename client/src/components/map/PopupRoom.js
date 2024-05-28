@@ -1,9 +1,13 @@
 import { Box, Card, ImageListItem, ImageListItemBar } from '@mui/material';
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
+
+import {Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination,Autoplay, EffectCoverflow, Zoom } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/zoom';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-coverflow';
 import { useValue } from '../../context/ContextProvider';
 
 const PopupRoom = ({ popupInfo }) => {

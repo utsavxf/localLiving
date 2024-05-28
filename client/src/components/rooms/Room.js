@@ -16,13 +16,15 @@ import { forwardRef, useEffect, useState } from 'react';
 import { useValue } from '../../context/ContextProvider';
 import { Close, StarBorder } from '@mui/icons-material';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay, EffectCoverflow, Zoom } from 'swiper/modules';
+
+import { Swiper,SwiperSlide } from 'swiper/react';
+import { Navigation,Autoplay, EffectCoverflow, Zoom } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/effect-coverflow';
 import 'swiper/css/zoom';
-import './swiper.css';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-coverflow';
+
 
 const Transition = forwardRef((props, ref) => {
   return <Slide direction="up" {...props} ref={ref} />;
@@ -38,7 +40,7 @@ const Room = () => {
 
   useEffect(() => {
     if (room) {
-      const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${room.lng},${room.lat}.json?access_token=${process.env.REACT_APP_MAP_TOKEN}`;
+      const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${room.lng},${room.lat}.json?access_token=${process.env.REACT_APP_TOKEN}`;
       fetch(url)
         .then((response) => response.json())
         .then((data) => setPlace(data.features[0]));
