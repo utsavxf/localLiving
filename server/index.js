@@ -3,12 +3,17 @@ import dotenv from 'dotenv';
 import roomRouter from './routes/roomRouter.js';
 import mongoose from 'mongoose';
 import userRouter from './routes/userRouter.js';
+import cors from 'cors';
+
+
 
 dotenv.config();
 
 const port = process.env.PORT || 5000;
 
 const app = express();
+
+app.use(cors());
 
 
 //CORS ,insread of installing the library here,we are manually setting from where requests can be allowed,what are the allowed http methods and headers
