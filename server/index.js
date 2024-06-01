@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(cors({
-  origin: "https://localliving.onrender.com/"
+  origin: "https://local-living.netlify.app/"
 }
 ))
 app.options('*', cors())
