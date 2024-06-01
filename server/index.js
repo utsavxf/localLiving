@@ -6,14 +6,13 @@ import userRouter from './routes/userRouter.js';
 import cors from 'cors';
 
 
-
 dotenv.config();
 
 const port = process.env.PORT || 5000;
 
 const app = express();
 
-app.use(cors());
+app.use(cors()); 
 
 
 //CORS ,insread of installing the library here,we are manually setting from where requests can be allowed,what are the allowed http methods and headers
