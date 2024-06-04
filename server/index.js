@@ -16,18 +16,18 @@ app.use(cors({ origin: '*' }));
 
 //CORS ,insread of installing the library here,we are manually setting from where requests can be allowed,what are the allowed http methods and headers
 //instead of this bullshit we can also simply write app.use(cors()),but ok learning is there
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', process.env.CLIENT_URL);
-  res.setHeader(
-    'Access-Control-Allow-Methods',
-    'GET, POST, PUT, PATCH, DELETE'
-  );
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'X-Requested-With, Content-Type, Authorization'
-  ); 
-  next(); 
-});
+// app.use((req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', process.env.CLIENT_URL);
+//   res.setHeader(
+//     'Access-Control-Allow-Methods',
+//     'GET, POST, PUT, PATCH, DELETE'
+//   );
+//   res.setHeader(
+//     'Access-Control-Allow-Headers',
+//     'X-Requested-With, Content-Type, Authorization'
+//   ); 
+//   next(); 
+// });
 
 app.use(express.json({ limit: '10mb' }));
 //DON'T FORGET TO MAKE IT TOO BIG OR LEAVE IT BLANK BECAUSE HACKERS CAN DO THE DENIAL OF SERVICE ATTACK BY SENDING A HUGE FILE
