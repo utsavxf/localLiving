@@ -12,7 +12,14 @@ const port = process.env.PORT || 5000;
 
 const app = express();
 
-app.use(cors({ origin: '*' }));
+const corsConfig={
+  origin:"*",
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+};
+
+app.options("", cors(corsConfig));
+app.use(cors(corsConfig));
 
 //CORS ,insread of installing the library here,we are manually setting from where requests can be allowed,what are the allowed http methods and headers
 //instead of this bullshit we can also simply write app.use(cors()),but ok learning is there
