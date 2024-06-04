@@ -15,6 +15,8 @@ const initialState = {
   addreddFilter:null,
   filteredRooms:[], 
   room:null,
+  users:[],
+
 };
 
 const Context = createContext(initialState);
