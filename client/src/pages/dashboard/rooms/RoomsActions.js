@@ -2,12 +2,21 @@ import { Box, IconButton, Tooltip } from '@mui/material';
 import { Delete, Edit, Preview } from '@mui/icons-material';
 import { useValue } from '../../../context/ContextProvider';
 import { deleteRoom } from '../../../actions/room';
+import { useNavigate } from 'react-router-dom';
 
 const RoomsActions = ({ params }) => {
   const {
     dispatch,
     state: { currentUser },
   } = useValue();
+
+    
+  const navigate = useNavigate(); // Add this line to get the navigation function
+
+  const handleDelete = async () => {
+    await deleteRoom(params.row, currentUser, dispatch);
+  };
+
   return (
     <Box>
       <Tooltip title="View room details">
@@ -24,7 +33,7 @@ const RoomsActions = ({ params }) => {
       </Tooltip>
       <Tooltip title="Delete this room">
         <IconButton
-          onClick={() => deleteRoom(params.row, currentUser, dispatch)}
+          onClick={handleDelete}
         >
           <Delete />
         </IconButton>

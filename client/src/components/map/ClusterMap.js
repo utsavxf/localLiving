@@ -77,7 +77,7 @@ const ClusterMap = () => {
       ref={mapRef}
       onZoomEnd={(e) => setZoom(Math.round(e.viewState.zoom))}
     >
-      <h1>hi</h1>
+      <h1></h1>
       {clusters.map((cluster) => {
         const { cluster: isCluster, point_count } = cluster.properties;
         const [longitude, latitude] = cluster.geometry.coordinates;
